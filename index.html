@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Grant Family Church</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <meta name="author" content="Gradi Puata">
+     <meta name="description" content="Grant Family Church, Church , Family, Christian">
+     <link rel="stylesheet" href="styles.css">
+     <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-bar"> 
+                <div class="nav-img">
+                    <img src="images/bghime.jpeg" id="logo-nav" alt="">
+                    <p id="p-nav">The Grant Family Church</p>
+                </div>
+
+                <ul class="links" id="links-ul">
+                    <li class="nav-link"><a href="../" class="link-s">Home</a></li>
+                    <li class="nav-link"><a href="#about" class="link-s">About</a></li>
+                    <li class="nav-link"><a href="ministry.html" class="link-s">Ministry</a></li>
+                    <li class="nav-link"><a href="connect.html" class="link-s">Connect</a></li>
+                </ul>
+        </nav>   
+    </header>
+    <main>
+        <section class="intro" id="home">
+            <div class="msg">
+                <h1>Grant Family Church Welcome's You</h1>
+                <p>
+                   A center of Answers. <br>
+                   Praise & worship.<br>
+                   BibleStudy<br>
+                   Prayer Meeting<br>
+                </p>
+            </div>
+        </section>
+        <section id="about">
+            <div class="min-con">
+                <h2>Our ministry is a connecting Ministry</h2>
+                <div class="paragraph">
+                    <span>We are a Family Church</span>
+                    <span>Saved by grace;</span>
+                    <span>Empowered to empower</span>
+                    <span>Living to be remembered.</span>
+                </div>
+                <p>Jesus is calling you today.</p>
+                <span>Don't Resist</span>
+            </div>
+            <div class="schedule-times">
+                <h2>Service Schedule</h2>
+                <span>Sunday Service, Bible Study, Prayer Meeting</span>
+                <div class="program">
+                    <div class="content-">
+                        <span>3:00PM</span><span>Sunday Service</span>
+                    </div>
+                    <div class="content-">
+                        <span>6:00PM</span><span>Tuesdays: Intercesors Meeting</span>
+                    </div>
+                    <div class="content-">
+                        <span>6:00</span><span>Thursday: Prayer Meeting</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-pop-up" id="pop">
+                <span id="close">&times;</span>
+                <h3>Special Events May Include</h3>
+                <div class="events">
+                    <p>Day of worship</p>
+                    <p>Easter Celebration</p>
+                    <p>Christmas Lunch</p>
+                    <p>Youth Services</p>
+                    <p>Mother/Women Services</p>
+                    <p>Men's Conference</p>
+                </div>
+            </div>
+            
+        </section>
+       
+    </main>
+    <footer class="footer-m">
+        <section class="footer">
+            <div class="newsletter">
+                <h3 class="h3-foot">Newsletter</h3>
+                <p id="news-p">Want to know what we are up to? Sign up for the newsletter and join our tribe.</p>
+                <div class="contain-email-sub">
+                    <input type="email" name="" id="email-foot" placeholder="Email Address">
+                    <button type="submit" id="foot-sub">Subscribe</button>
+                </div>
+            </div>
+            <div class="schedule">
+                <h3 class="h3-foot">Weekly Program</h3>
+                <div class="time-day">
+                    <h4 id="h4-day">Tuesdays:</h4>
+                    <span class="add-time"> 18:00 - 19:00</span>
+                </div>
+                <div class="time-day">
+                    <h4 id="h4-day">Thursday:</h4>
+                    <span class="add-time"> 18:00 - 19:00</span>
+                </div>
+                <div class="time-day">
+                    <h4 id="h4-day">Sunday:</h4>
+                    <span class="add-time"> 15:00 - 17:00</span>
+                </div>
+            </div>
+            <div class="social-media">
+                <h3 class="h3-foot">Connect with us</h3>
+                <p class="social-p"><span>Tel: </span><span>031 206 4039</span></p>
+                <p class="social-p"><span>Phone: </span><span>072 319 3185</span></p>
+                <p class="social-p"><span>Email: </span><span>grantfamilychurch@gmail.com</span></p>
+                <a href="" id="facebook-link">
+                    <span id="span-f">Facebook</span><i class="fa-brands fa-facebook"></i>
+                </a>
+    
+            </div>
+            <div class="address">
+                <h3 class="h3-foot">Address</h3>
+                <address>
+                    47 Deodar Ave, Glenwood, Berea, 4001
+                </address>
+            </div>
+            
+        </section>
+        <div class="closing">
+            <p>This website was Developed by <a href="" id="last-f-p">Gradi Puata</a></p>
+            <a href="../">Back to top ⬆</a>
+        </div>
+    </footer>
+    <script>
+            const subscriber = []
+
+        // Close pop up
+        document.getElementById('close').addEventListener('click', () => {
+            document.getElementById('pop').style.display = 'none';
+        })
+        // subscribe
+        document.getElementById('foot-sub').addEventListener('click',()=>{
+            let u_email = document.getElementById('email-foot');
+            const email = u_email.value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (subscriber.includes(email)) {
+                    alert('You are already subscribed!');
+                    return;
+            }
+
+
+            if (!emailPattern.test(email)) {
+                    alert('Please enter a valid email address.');
+                    return;
+            }
+            else{
+                subscriber.push(email);
+                alert(`${email} has subscribed to us`)
+            }
+        })
+
+    </script>
+</body>
+</html>

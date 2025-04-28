@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Roboto',sans-serif;
+}
+main{
+    background: url('images/terren-hurst-pGkcZXkUa6c-unsplash.jpg');
+    background-size: cover;
+    color: whitesmoke;
+}
+.top{
+    text-align: center;
+    margin-top: 50px;
+}
+.content-con{
+    margin-top: 70px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+.detail-con{
+    display: flex;
+    align-items: center;
+}
+.detail-con div{
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+.detail-con div h3{
+    color: rgb(0, 119, 255);
+}
+.fa-solid{
+    border-radius: 50%;
+    background-color: beige;
+    padding: 1rem;
+    color: black;
+}
+.fa-solid:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+/* form */
+#connect-form{
+    background-color: rgb(230, 224, 224);
+    padding: 1rem;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 0px 5px 20px black;
+    margin-top: -4rem;
+    border-radius: 20px;
+}
+
+fieldset{
+    border: none;
+    font-size: x-large;
+    font-weight: bolder;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    text-shadow: 1px 1px 2px ;
+}
+#email-con,#full-name-con,textarea{
+    border: none;
+    border-bottom: 2px solid skyblue;
+    padding: 0.3rem 1rem;
+    width: 400px;
+    background: transparent;
+    margin: 1rem 0;
+    font-weight: 700;
+    position: relative;
+}
+.use--{
+    color: red;
+}
+#email-con:focus,#full-name-con:focus, textarea:focus{
+    outline: none;
+}
+#btn-sub-con{
+    padding:4px;
+    background-color:aquamarine ;
+    border: 1px solid grey;
+    box-shadow: 1px 1px 4px;
+    font-weight: bold;
+    font-size: medium;
+    margin-top: 2rem;
+    opacity: 0.5;
+}
+#btn-sub-con:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+/* Media Queries */
+@media (min-width:320px) and (max-width:768px){
+    .content-con{
+       flex-wrap: wrap;
+    }
+    .content-con>div{
+        margin: 2rem 0
+    }
+    #connect-form{
+        font-size: smaller;
+        margin-top: 0.5rem;
+        width: 100vw;
+
+    }
+    #connect-form input, #connect-form textarea{
+        width: 100%;
+    }
+    
+}

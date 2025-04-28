@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+}
+.b-main{
+    display: flex;
+    flex-direction: column;
+}
+#min-main section{
+    height: 90vh;
+}
+#services{
+    background: url('minImgs/bgService.jpg');
+    background-size: cover;
+    text-align: center;
+    color: whitesmoke;
+}
+#services>h1{
+    padding: 3rem;
+    font-size: 100px;
+    text-shadow: 1px 1px 10px ;
+}
+#services>p{
+    width:70%;
+    margin: 0 auto;
+    text-shadow: 1px 2px 10px black ;
+}
+.slider{
+    margin-top: 2rem;
+    margin-left: 100px;
+    position: relative;
+}
+.slider img{
+    width:300px;
+    height: 200px;
+    object-fit: cover;
+    position: absolute;
+    text-align: center;
+}
+#services>span{
+    font-size: 1.4rem;
+    padding-left: 1rem;
+    color: aquamarine;
+}
+#next{
+    font-size: 2rem;
+    color: aqua;
+}
+#next:hover{
+    cursor: pointer;
+}
+/* women */
+#women{
+    background: linear-gradient(180deg, rgb(22, 22, 22),rgb(4, 13, 44),black);
+}
+#women h1{
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    text-shadow: 1px 1px 3px ;
+    color: whitesmoke;
+}
+#women div{
+    display: flex;
+    justify-content: space-evenly;
+    height: 80%;
+    padding-bottom: 2rem;
+}
+#women div img{
+    border-radius: 10px;
+}
+/* HELP */
+#help{
+    background: url('images/isaac-ngai-bo9RjvPNQ4Y-unsplash.jpg');
+    background-size: cover;
+    background-blend-mode: color;
+
+}
+#help h1{
+    text-align: center;
+    text-shadow: 1px 1px 30px white ;
+    padding: 5rem;
+    color: whitesmoke
+}
+article{
+    display: flex;
+    justify-content: space-around;
+}
+article div{
+    width: 30vw;
+    border-radius: 10px;
+    color: rgb(41, 143, 202);
+    text-shadow: 1px 3px 5px black;
+    font-size: larger;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 30px white;
+}
+article div:nth-child(1){
+    background: url('minImgs/wlefare.jpg');
+    background-size: cover;
+}
+article div:nth-child(2){
+    background: url('minImgs/brett-jordan-u57JfB4QBKY-unsplash.jpg');
+    background-size: cover;
+}
+article div:nth-child(3){
+    background: url('minImgs/kimberly-farmer-lUaaKCUANVI-unsplash.jpg');
+    background-size: cover;
+}
+/* News */
+
+#news>h1{
+    text-align: center;
+    padding: 5rem;
+    font-size: 2.4rem;
+    text-shadow: 1px 1px 5px black;
+}
+.store-min{
+    display: flex;
+    justify-content: space-around;
+}
+.store-min>div{
+    box-shadow:  0 0 100px;
+    border-radius: 1rem;
+    padding: 1rem;
+    height: 60vh;
+}
+.gallery{
+    display: flex;
+    flex-direction: column;
+}
+.gallery img{
+    width: 100%;
+    object-fit: cover;
+    height: 10vh;
+    margin: 0.7rem;
+}
+/* Day of Worship */
+.worship-min,#youth,#baptism{
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+}
+.worship-min{
+    background: url('images/terren-hurst-pGkcZXkUa6c-unsplash.jpg'); 
+    background-size: cover;
+}
+#youth{
+    background: url('images/terren-hurst-pGkcZXkUa6c-unsplash.jpg');
+    background-size: cover;
+}
+#baptism{
+    background: url('images/terren-hurst-pGkcZXkUa6c-unsplash.jpg');
+    background-size: cover;
+    width: 400px;
+}
+/* Media Queries */
+@media (min-width:320px) and (max-width:768px){
+    .b-main{
+        position: relative;
+    }
+    #services h1{
+        font-size: xx-large;
+    }
+    #women h1{
+        font-size: medium;
+    }
+    .images div{
+        width: 90%;
+        height: 100px;
+        margin: 1rem;
+    }
+    .images{
+        flex-direction: column;
+        margin: -60px auto;
+    }
+    #news{
+        min-height: fit-content;
+    }
+    #news h1
+    {
+        padding: 0;
+    }
+    #women div{
+        flex-wrap: wrap;
+    }
+    #women div>img{
+        width:40vw;
+        height: 30vh;
+        object-fit: cover;
+    }
+    #help article{
+        flex-wrap: wrap;
+    }
+    .store-min{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+    #youth,#baptism,.store-min{
+        width:30vh;
+        height: 50vh;
+        margin: 1rem auto;
+    }
+    #baptism{
+        height: fit-content;
+    }
+    /* fix footer */
+    .footer-m{
+        position: absolute;
+        bottom: -1100px;
+    }
+}
+@media (min-width:769px) and (max-width:1200px){
+    #women div{
+        flex-wrap: wrap;
+    }
+    #women div>img{
+        width:40vw;
+        height: 30vh;
+        object-fit: cover;
+    }
+    .images{
+        flex-direction: wrap;
+    }
+    .images>div{
+        width: 30%;
+        height: 40vh;
+    }
+    .store-min{
+        display: flex;
+        flex-direction: column;
+    }
+    #baptism{
+        width:100%;
+        height: fit-content;
+    }
+    .gallery>img{
+        width: 50vw;
+        height: 26vh;
+    }
+    .b-main{
+        position: relative;
+    }
+    .footer-m{
+        position: absolute;
+        bottom: -1800px;
+    }
+}
+@media (min-width:1201px) and (max-width:1300px) {
+    #women div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    #women div>img{
+        width:30vw;
+        height: 30vh;
+        object-fit: cover;
+    }
+
+    
+}
